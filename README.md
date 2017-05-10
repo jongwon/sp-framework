@@ -11,8 +11,7 @@ sp framework 은 스프링을 기반으로 웹을 모듈 기반으로 만들기 
 
 sp-framework 의 모듈을 사용하려면 pom.xml 파일에 아래와 같이 maven repository 를 추가해 주어야 한다.
 
-<pre><code>
-
+"`
 	<repositories>
 		<repository>
 			<id>sp-framework</id>
@@ -21,7 +20,7 @@ sp-framework 의 모듈을 사용하려면 pom.xml 파일에 아래와 같이 ma
 		</repository>
 	</repositories>
 
-</code></pre>
+"`
 
 ---
  
