@@ -27,7 +27,7 @@ sp framework 은 스프링을 기반으로 웹을 모듈 기반으로 만들기 
 * web ui 는 thymeleaf 3 를 사용할 것을 권장한다. ( 이전에는 주로 freemarker 를 사용했었는데 스프링 설정이 갈수록 힘들어지고 있어서 thymeleaf 로 갈아타기로 결정했다. )
 * 데이터베이스는 mongo db 를 사용할 것을 권장하지만 mysql 이나 hsql 같은 sql db 를 사용하는 것도 관계 없다.
 * web 모듈과 domain 모듈을 분리해서 개발하는 것이 좋겠으나 많은 모듈에서 사용해야 하는 경우가 아니라면 같이 개발해서 사용하다 필요하면 모듈을 분리하는 전략을 사용하는 것도 괜찮다.
-
+* micro service architecture 를 선호한다. 가능한 spring boot 서버들로 서비스가 가볍게 개발되는 것을 선호 하겠다.
 
 
 ## 프레임워크 및 모듈 사용 
