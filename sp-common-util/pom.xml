@@ -13,4 +13,12 @@
 
 	<artifactId>sp-common-util</artifactId>
 
+	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+
+	</dependencies>
 </project>

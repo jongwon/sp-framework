@@ -14,11 +14,27 @@ public class AbstractTestClass {
 
 	protected static FileSystemXmlApplicationContext ctx;
 
+	/**
+	 * initialize test class
+	 *
+	 * @param type dev / test / product
+	 */
 	protected static void init(String type) {
 		ctx = new FileSystemXmlApplicationContext(
 				format("file://%s/.soreply/application-%s.xml",
 						System.getProperty("user.home"), type));
 	}
 
+	/**
+	 * initialize test class
+	 *
+	 * @param alias  project alias
+	 * @param type  dev / test / product
+	 */
+	protected static void init(String alias, String type) {
+		ctx = new FileSystemXmlApplicationContext(
+				format("file://%s/.%s/application-%s.xml",
+						System.getProperty("user.home"), alias, type));
+	}
 
 }
