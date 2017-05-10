@@ -1,5 +1,7 @@
 # sp-framework
 
+## 프레임워크 소개 
+
 sp framework 은 스프링을 기반으로 웹을 모듈 기반으로 만들기 위한 기본 프레임이 되는 모듈을 구상해서 만들고 있습니다.
 
 이 프레임워크가 지향하는 바는 다음과 같습니다.
@@ -8,10 +10,20 @@ sp framework 은 스프링을 기반으로 웹을 모듈 기반으로 만들기 
 * 모듈은 쪼개면 쪼갤수록 좋아진다.
 * 모듈은 그 자체로 자신이 어떤 권한(auth)과 어떤 데이터(db)로 어떻게 표현되어야 하는지(ui)를 모두 설명할 수 있어야 한다.
 
+## 주요 모듈 
+
+기본 프레임에서 제공하는 모듈은 아래와 같다.
+* sp-module-config
+* sp-basic-spring-module
+* sp-web-module
+* sp-site-module
+* sp-common-util
+
+
+## 프레임워크 및 모듈 사용 
 
 sp-framework 의 모듈을 사용하려면 pom.xml 파일에 아래와 같이 maven repository 를 추가해 주어야 한다.
-
-
+```xml
 	<repositories>
 		<repository>
 			<id>sp-framework</id>
@@ -19,8 +31,7 @@ sp-framework 의 모듈을 사용하려면 pom.xml 파일에 아래와 같이 ma
 			<url>http://maven.soreply.com/repository/maven-snapshots/</url>
 		</repository>
 	</repositories>
+```
 
 
-
----
  
