@@ -2,6 +2,8 @@ package com.sp.web.config;
 
 
 import org.apache.commons.configuration2.XMLConfiguration;
+import org.apache.commons.configuration2.builder.FileBasedConfigurationBuilder;
+import org.apache.commons.configuration2.builder.fluent.Parameters;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -66,7 +68,12 @@ public abstract class SpWebModule implements InitializingBean, ServletContextAwa
 	
 	public static XMLConfiguration readXMLProperties(InputStream ins){
 		try {
-			XMLConfiguration prop = new XMLConfiguration();
+			Parameters params = new Parameters();
+			FileBasedConfigurationBuilder<XMLConfiguration> fileBuilder =
+					new FileBasedConfigurationBuilder<>(XMLConfiguration.class)
+							.configure(params.fileBased().setFileName("/tmp/dummy.xml"));
+
+			XMLConfiguration prop = fileBuilder.getConfiguration();
 			prop.read(ins);
 			return prop;
 		} catch (ConfigurationException e) {
