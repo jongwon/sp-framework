@@ -29,6 +29,8 @@ public class ModuleRegistry implements InitializingBean {
 	public void afterPropertiesSet() throws Exception {
 		singleTon = this;
 		moduleMap = new Hashtable<String, SpWebModule>();
+		if(moduleList == null || moduleList.isEmpty()) return;
+
 		for(SpWebModule module:moduleList){
 			moduleMap.put(module.getModuleName(), module);
 		}
