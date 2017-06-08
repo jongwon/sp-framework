@@ -32,19 +32,19 @@ public class AbstractTestClass {
 
     @Before
     public void before() {
-        log.debug(">>>> {} 시작 ", testName.getMethodName());
+        log.info(">>>> {} 시작 ", testName.getMethodName());
     }
 
     @After
     public void after() {
-        log.debug("<<<< {} 끝", testName.getMethodName());
+        log.info("<<<< {} 끝", testName.getMethodName());
     }
 
     protected String randomNumGenerate(int digit){
         String id = ""+java.util.concurrent.ThreadLocalRandom
                 .current()
                 .nextLong((long)Math.pow(10, digit-1), (long)Math.pow(10, digit));
-        log.debug("{} random id generated", id);
+        log.info("{} random id generated", id);
         return id;
     }
 
